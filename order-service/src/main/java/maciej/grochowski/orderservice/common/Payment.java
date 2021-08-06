@@ -1,4 +1,4 @@
-package maciej.grochowski.paymentservice.entity;
+package maciej.grochowski.orderservice.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,13 +9,14 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "payment_table")
 public class Payment {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    // remove Entity, Table, Id, GeneratedValue, because in this project it's a DTO, not Entity
+
     private int paymentId;
     private String paymentStatus; // success/failure
     private String transactionId;
+    
+    private int orderId;
+    private int quantity;
 }
