@@ -18,4 +18,7 @@ public class Payment {
     private int paymentId;
     private String paymentStatus; // success/failure
     private String transactionId;
+
+    private int orderId;
+    private double amount;
 }
